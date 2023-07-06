@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Debt_relations_project_version1.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Debt_relations_project_version1.Controllers
 {
@@ -16,9 +17,10 @@ namespace Debt_relations_project_version1.Controllers
             return View("Views/Registration/RegistrationForm.cshtml");
         }
         [HttpPost]
-        public string RegistationForm(string username,string mail)
+        public User RegistationForm(string username,string mail)
         {
-            return username + " " + mail;
+            var user = new User(username, mail);
+            return user;
         }
 
     }

@@ -1,6 +1,50 @@
-﻿namespace Debt_relations_project_version1.Models
+﻿using Microsoft.Data.SqlClient;
+
+namespace Debt_relations_project_version1.Models
 {
     public class User
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Mail { get; set; }
+        public string Password { get; set; }
+
+        public int IndificatorNumber { get; set; }
+
+        public IConfiguration Configuration { get; }
+
+
+        public User(string name, string mail)
+        {
+            Name = name;
+            Mail = mail;
+            string connection = "Server=(localdb)\\mssqllocaldb;Database=Debet_RelationsDB;Trusted_Connection=True;";
+            using (var sqlConnection = new SqlConnection(connection))
+            {
+                sqlConnection.Open();
+                string userfind = $"select USER_ID, Parole from Users where Name = '{name}' AND Mail = '{mail}'";
+                SqlCommand command = new SqlCommand(userfind, sqlConnection);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows) // если есть данные
+                {
+                    while (reader.Read())
+                    {
+                        if (!reader.IsDBNull(reader.GetOrdinal("USER_ID")))
+                        {
+                            Id = reader.GetInt32(0);
+                        }
+                        if (!reader.IsDBNull(reader.GetOrdinal("Parole")))
+                        {
+                            Password = reader.GetString(1);
+                        }
+                        //Console.WriteLine($"{Id} {ChatId} {SeminarId1} {SeminarId2}");
+                    }
+                }
+                command.Parameters.Clear();
+                reader.Close();
+
+            }
+        }
+
     }
 }
