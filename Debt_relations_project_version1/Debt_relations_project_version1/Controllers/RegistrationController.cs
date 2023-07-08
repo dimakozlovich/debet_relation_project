@@ -12,15 +12,27 @@ namespace Debt_relations_project_version1.Controllers
             _logger = logger;
         }
         [HttpGet]
-        public IActionResult RegistationForm()
+        public IActionResult Entrance()
         {
-            return View("Views/Registration/RegistrationForm.cshtml");
+            return View("Views/Registration/Entrance.cshtml");
         }
         [HttpPost]
-        public User RegistationForm(string username,string mail)
+        public User Entrance(string username,string mail)
         {
             var user = new User(username, mail);
             return user;
+        }
+
+
+        [HttpGet]
+        public IActionResult Registration()
+        {
+            return View("Views/Registration/Registration.cshtml");
+        }
+        [HttpPost]
+        public void Registration(string username, string mail, string password)
+        {
+            var User = new User(username,mail,password);
         }
 
     }

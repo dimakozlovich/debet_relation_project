@@ -16,10 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1
 build_property._RazorSourceGeneratorDebug = 
 
-[B:/Debet Relation Project/Debt_relations_project_version1/Debt_relations_project_version1/Views/Registration/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEluZGV4LmNzaHRtbA==
+[B:/Debet Relation Project/Debt_relations_project_version1/Debt_relations_project_version1/Views/Account/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[B:/Debet Relation Project/Debt_relations_project_version1/Debt_relations_project_version1/Views/Registration/RegistrationForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFJlZ2lzdHJhdGlvbkZvcm0uY3NodG1s
+[B:/Debet Relation Project/Debt_relations_project_version1/Debt_relations_project_version1/Views/Registration/Entrance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEVudHJhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/Debet Relation Project/Debt_relations_project_version1/Debt_relations_project_version1/Views/Registration/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

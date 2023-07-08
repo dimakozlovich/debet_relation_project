@@ -37,12 +37,22 @@ namespace Debt_relations_project_version1.Models
                         {
                             Password = reader.GetString(1);
                         }
-                        //Console.WriteLine($"{Id} {ChatId} {SeminarId1} {SeminarId2}");
                     }
                 }
                 command.Parameters.Clear();
                 reader.Close();
 
+            }
+        }
+        public User(string name, string mail, string password)
+        {
+            Name = name; Mail = mail; Password = password;
+            using (var sqlConnection = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=Debet_RelationsDB;Trusted_Connection=True;"))
+            {
+                sqlConnection.Open();
+                string sqlCommand = @$"INSERT INTO Users (Name, Mail, Parole) Values('{name}','{Mail}','{password}')";
+                SqlCommand command = new SqlCommand(sqlCommand, sqlConnection);
+                command.ExecuteNonQuery();
             }
         }
 
