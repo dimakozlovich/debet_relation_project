@@ -12,7 +12,11 @@ namespace Debt_relations_project_version1.Models
         public int IndificatorNumber { get; set; }
 
         public IConfiguration Configuration { get; }
-
+        public User(int id, string name) 
+        {
+            Id= id;
+            Name= name;
+        }
 
         public User(string name, string mail)
         {

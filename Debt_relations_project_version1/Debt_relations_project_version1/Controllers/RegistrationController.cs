@@ -17,11 +17,12 @@ namespace Debt_relations_project_version1.Controllers
             return View("Views/Registration/Entrance.cshtml");
         }
         [HttpPost]
-        public User Entrance(string username,string mail)
+        public IActionResult Entrance(string username,string mail)
         {
             var user = new User(username, mail);
-            return user;
-        }
+			var addictios = new Addictions(user);
+			return View("Views/Account/Account.cshtml", addictios.ListOfAddiction);
+		}
 
 
         [HttpGet]
@@ -30,9 +31,11 @@ namespace Debt_relations_project_version1.Controllers
             return View("Views/Registration/Registration.cshtml");
         }
         [HttpPost]
-        public void Registration(string username, string mail, string password)
+        public IActionResult Registration(string username, string mail, string password)
         {
-            var User = new User(username,mail,password);
+            var user = new User(username,mail,password);
+            var addictios = new Addictions(user);
+            return View("Views/Account/Account.cshtml",addictios.ListOfAddiction);
         }
 
     }
