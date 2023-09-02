@@ -61,3 +61,13 @@ B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project
 B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\obj\Debug\net6.0\Debt_relations_project_version1.csproj.CopyComplete
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\System.IO.Pipelines.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\System.Text.Json.dll
+B:\Debet Relation Project\Debt_relations_project_version1\Debt_relations_project_version1\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
