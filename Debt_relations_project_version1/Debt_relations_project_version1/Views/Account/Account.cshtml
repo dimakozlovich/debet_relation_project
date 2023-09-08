@@ -1,6 +1,5 @@
 ﻿@using Debt_relations_project_version1.Models;
 @model List<Addiction>
-
 @{
 	foreach(var addiction in Model)
 	{
@@ -15,13 +14,13 @@
 }
 <div>
 	<label>Id Пользлвателя</label>
-		<input id="usersId" type="text" />
+	<input type="text" id="receiver" placeholder="Введите получателя" />
 	<br />
 	<lable>Валюта</lable>
 		<select id="currency" name="currency">
-			<option value="apple">BYN</option>
-			<option value="banana">USD</option>
-			<option value="orange">EUR</option>
+			<option value="BYN">BYN</option>
+			<option value="USD">USD</option>
+			<option value="EUR">EUR</option>
 		</select>
 	<br />
 	<label>Сумма</label>
@@ -38,22 +37,23 @@
 	document.getElementById("sendBtn").addEventListener("click", function () {
 		const currency = document.getElementById("currency").value;
 		const summ = document.getElementById("summ").value;
-		hubConnection.invoke("Send", currency, cumm)
+		let to = document.getElementById("receiver").value;
+		hubConnection.invoke("Send",summ,to)
 			.catch(function (err) {
 				return console.error(err.toString());
 			})
 	});
 
-	hubConnection.on("Receive", function (currency, summ) {
+	hubConnection.on("Receive", function (summ,to) {
 		const summElem = document.createElement("p");
 		summElem.textContent = `${summ}`;
 
 		const currencyElem = document.createElement("b");
 		currencyElem.appendChild(summElem);
-		currencyElem.appendChild(document.createTextNode(currency));
+		currencyElem.appendChild(document.createTextNode(to));
 
-		const firstElem = document.getElementById("chatroom").firstChild;
-		document.getElementById("chatroom").insertBefore(currencyElem, firstElem)
+		const firstElem = document.getElementById("requestroom").firstChild;
+		document.getElementById("requestroom").insertBefore(currencyElem, firstElem)
 	})
 
 	hubConnection.start()

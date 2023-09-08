@@ -6,7 +6,7 @@ document.getElementById("sendBtn").addEventListener("click", function()
 { 
     const currency = document.getElementById("currency").value;
     const summ = document.getElementById("summ").value; 
-    hubConnection.invoke("Send", currency, cumm)
+    hubConnection.invoke("Send", currency, summ)
     .catch(function (err)
     {
         return console.error(err.toString());
